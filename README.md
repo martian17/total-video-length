@@ -28,4 +28,4 @@ $ ./videolen . mp4
 0 days, 0 hours, 6 minutes, 41.553000 seconds
 ```
   
-ffmpegなどを使っているので、もし入っていなければaptなりbrewなりpacmanなりでインストールしていただければ動くと思います。
+ffmpegやnodeなどを使っているので、もし入っていなければaptなりbrewなりpacmanなりでインストールしていただければ動くと思います。
