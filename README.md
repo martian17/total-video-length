@@ -1,6 +1,6 @@
 # total-video-length
 
-この動画を元に使いやすいオールインワン実行可能bashコマンドファイルを作ってみました。
+この動画を元に使いやすいオールインワンの実行可能ばbashコマンドファイルを作ってみました。
 https://www.youtube.com/watch?v=bsq2YY-XAEo
 
 ## 使い方
