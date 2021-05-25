@@ -10,7 +10,7 @@ $ git clone https://github.com/martian17/total-video-length.git
 # videolenファイルを整理したいディレクトリーに移動させるか、/usr/binなどのコマンド置き場に移動させ、使ってください。
 $ mv videolen ~/Videos/
 ```
-videolenコマンドは2つの引数を取ります。1つ目は探索場所、2つ目は拡張子です。
+videolenコマンドは2つの引数を取ります。1つ目は探索場所、2つ目は拡張子です。  
 実行例
 ```bash
 $ ./videolen . mp4
