@@ -1,0 +1,14 @@
+#!/bin/bash
+
+sum=0
+
+while read -d $'\0' f
+do
+    time=$(ffprobe -i "$f" -show_entries format=duration -v quiet -of csv="p=0")
+    echo $f: $time seconds
+    sum=$(echo $sum+0$time | bc)
+done < <(find . -type f -name "*.mp4" -print0)
+
+echo $sum | node -e 'const stdin = process.stdin;let data = "";stdin.setEncoding("utf8");stdin.on("data", function (chunk) {data += chunk;});stdin.on("end", function () {let [num,dec] = data.split(".").map(a=>parseInt(a));const sec = num%60;num = (num-sec)/60;const min = num%60;num = (num-min)/60;const hours = num%24;num = (num-hours)/24;const days = num;console.log("\n"+data.trim()+" seconds");console.log(`${days} days, ${hours} hours, ${min} minutes, ${sec+"."+dec} seconds`);});'
+
+
